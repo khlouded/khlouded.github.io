@@ -1,0 +1,112 @@
+
+/*****************************
+Typography
+****************************/
+body {
+    font-family: 'Lato', sans-serif;
+}
+h1 {
+    font-size: 30pt;
+    text-transform: uppercase;
+}
+h1:hover {
+    font-weight: 400;
+}
+h2 {
+
+}
+.maincontent h2 {
+    color: #36966c;
+}
+h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    padding: 20px 0 0 0;
+    margin: 0px;
+    font-size: 1.5em;
+}
+h4 {
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    padding: 10px 0 0 0;
+    margin: 0px;
+}
+p {
+    font-size: 10pt;
+}
+/*****************************
+Layout
+****************************/
+.maincontent {
+    padding: 15px;
+    /* column-count: 2; */
+    /* column-gap: 10px; */
+}
+body {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0px;
+    margin: 0px;
+
+}
+.control{
+    display: grid;
+    align-content: center;
+    justify-self: center;
+    max-width: 1080px;
+
+}
+/* Navigation */
+nav a {
+    padding: 5px 15px;
+    display:inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    transition: .2s;
+    -o-transition: .2s;
+    -moz-transition: .2s;
+    -webkit-transition: .2s;
+    border-radius: 4px;
+    font-size: 10pt;
+    position: relative;
+}
+nav a:hover {
+    color: #1a1a1a;
+}
+nav a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #1a1a1a;
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+    width: 0;
+}
+nav a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+/* Header */
+header {
+    padding: 50px 0px;
+}
+/* Content */
+.maincontent ul {
+    margin: 5px 0;
+}
+.maincontent li {
+
+}
+.maincontent dt {
+    font-weight: 700;
+}
+
+.maincontent dd {
+    font-weight: inherit;
+    Margin-left: 0px;
+    margin-bottom: 10px;
+}
