@@ -110,3 +110,8 @@ header {
     Margin-left: 0px;
     margin-bottom: 10px;
 }
+/* Image Containers */
+.imgbox {
+    display: inline-block;
+    vertical-align: top;
+}
