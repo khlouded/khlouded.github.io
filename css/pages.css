@@ -147,7 +147,7 @@ button.backtotop {
 header {
     height: 100px;
     overflow: visible;
-    background-color: #1a1a1a;
+    background-color: #292929;
     color: #e6e6e6;
     position:relative;
     padding: 50px 15px;
@@ -164,7 +164,7 @@ header:after {
     transform: translate(-50%,0);
     width: 100vw;
     z-index: -3;
-    background-color: #1a1a1a;
+    background-color: #292929;
 }
 header h1 {
     color: #e6e6e6;
