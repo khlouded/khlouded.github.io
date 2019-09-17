@@ -38,11 +38,11 @@ h4 {
 
 p {
     padding: 5px 0;
-    font-size: 12pt;
+    font-size: 16pt;
     margin-top: 0px;
 }
 ul {
-    padding: 5px 0px 0px 20px ;
+    padding: 5px 0px 20px 20px ;
     
 }
 ul ul {
@@ -86,11 +86,7 @@ html {
     scroll-behavior: smooth;
 }
 nav {
-    max-width: 1080px;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%,0);
+
     background-color: #e6e6e6;
     z-index: 5;
 
@@ -142,6 +138,7 @@ button.backtotop {
     bottom: 20px;
     right: 30px;
     position: fixed;
+    font-family:  Lato;
 }
 
 
@@ -164,7 +161,7 @@ header:after {
     top: 0;
     left: 50%;
     transform: translate(-50%,0);
-    width: 150vw;
+    width: 100vw;
     z-index: -3;
     background-color: #1a1a1a;
 }
@@ -180,7 +177,7 @@ header h1 {
     margin: 5px 0;
 }
 .maincontent li {
-    font-size: 12pt;
+    font-size: 16pt;
 
 }
 .maincontent dt {
@@ -193,14 +190,15 @@ header h1 {
     margin-bottom: 10px;
 }
 .maincontent h1 {
-    font-size: 21pt;
+    font-size: 48pt;
     margin-top: 30px;
+
 }
 ul ~ p {
     margin: 0;
 }
 .maincontent p + ul {
-    margin-bottom:20px;
+    margin-bottom:40px;
     margin-top:0;
     padding-top:0;
 }

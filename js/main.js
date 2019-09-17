@@ -16,6 +16,23 @@ $(document).ready(function(){
         //end if
     });    
 });
+// Random Colour on Hover
+$(document).ready(function(){
+
+    $(".passed").mouseenter(function(){
+        // Hovering on item - random color
+        var r = Math.floor(Math.random() * 255);
+        var g = Math.floor(Math.random() * 80);
+        var b = Math.floor(Math.random() * 255);
+        var color = "rgb("+r+","+g+","+b+")"
+        $(this).css("color", color);
+    }).mouseleave(function() {      
+        //if not hovering on item
+        var main = "rgb(0,0,0,0.8)"
+        $(this).css("color", main);
+        //end if
+    });    
+});
 // ////////////////////////////////////////////////
 // Initial Fade In
 // Copied from Froda, honestly a bit confused

@@ -36,15 +36,25 @@ a {
     text-decoration: none;
     color: inherit;
 }
+.passed {
+    color: rgb(0,0,0,0.8);
+}
 /* Loads */
 .ass {
     /* display: none; */
 }
 
 /* Date */
-h2 .date { display: none; }
-h2:hover .code { display: none; }
-h2:hover .date { display: inline; }
+h2 .date { 
+    display: none; 
+}
+h2:hover .code {
+    display: none;
+}
+h2:hover .date {
+    display: inline;
+}
+
 /* grid */
 .container {
     display: grid;
@@ -71,6 +81,7 @@ footer {
 footer p {
     text-align: center;
 }
+
 /* Background stuff */
 div.fancy {
     z-index: 3;
