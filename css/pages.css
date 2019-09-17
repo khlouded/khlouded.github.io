@@ -52,6 +52,7 @@ ul ul {
 /*****************************
 Layout
 ****************************/
+
 .maincontent {
     padding: 15px;
     /* column-count: 2; */
@@ -63,7 +64,7 @@ body {
     grid-template-columns: repeat(1, 1fr);
     padding: 0px;
     margin: 0px;
-    position: relative
+    position: relative;
 
 
 }
@@ -81,6 +82,19 @@ hr {
     margin-bottom: 100px;
 }
 /* Navigation */
+html {
+    scroll-behavior: smooth;
+}
+nav {
+    max-width: 1080px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    background-color: #e6e6e6;
+    z-index: 5;
+
+}
 nav a {
     padding: 5px 15px;
     display:inline-block;
@@ -93,6 +107,10 @@ nav a {
     border-radius: 4px;
     font-size: 10pt;
     position: relative;
+}
+.navList a.main {
+    color: #1a1a1a;
+    font-size: 700;
 }
 nav a:hover {
     color: #1a1a1a;
@@ -113,6 +131,20 @@ nav a:hover:after {
     width: 100%; 
     left: 0; 
 }
+/* Back to top */
+button.backtotop {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: lightgrey;
+    padding: 15px;
+    font-size: 12pt;
+    bottom: 20px;
+    right: 30px;
+    position: fixed;
+}
+
+
 /* Header */
 header {
     height: 100px;
@@ -121,6 +153,7 @@ header {
     color: #e6e6e6;
     position:relative;
     padding: 50px 15px;
+    margin-top: 100px;
 
 
 }
@@ -131,7 +164,7 @@ header:after {
     top: 0;
     left: 50%;
     transform: translate(-50%,0);
-    width: 110vw;
+    width: 150vw;
     z-index: -3;
     background-color: #1a1a1a;
 }
@@ -140,6 +173,9 @@ header h1 {
 
 }
 /* Content */
+.maincontent {
+    max-width: 1080px;
+}
 .maincontent ul {
     margin: 5px 0;
 }
@@ -172,6 +208,13 @@ dl {
     padding-bottom: 20px;
 }
 
+.columnsection {
+    column-count: 2;
+    column-gap: 20px;
+}
+.columnsection p {
+    margin-bottom: 0px;
+}
 /* Image Containers */
 .imggallery {
     display: grid;
