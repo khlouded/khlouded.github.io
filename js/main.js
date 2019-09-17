@@ -35,7 +35,40 @@ $(document).ready(function fadein() {
 });
 // $(".ass").fadeIn().removeClass("ass");
 
+// Random squares cause it's cool (doesnt work for some reason)
+
+// function pickColor(){
+//         // Hovering on page - random color
+//         var r = Math.floor(Math.random() * 80);
+//         var g = Math.floor(Math.random() * 255);
+//         var b = Math.floor(Math.random() * 80);
+//         var color = "rgb("+r+","+g+","+b+")"
+//         return color;
+// }
+
+// function pickPos(){
+//     return Math.floor((Math.random()*100));
+// }
+// function pickSize(){
+//     return Math.floor((Math.random()*300)+100) + "px";
+// }
+// function addSquare(){
+//     var div = document.createElement("div");
+//     div.innerHTML = "HELP"
+//     div.style.background = pickColor();
+//     div.style.left=pickPos() + "%";
+//     div.style.top=pickPos() + "%";
+//     div.style.width=pickSize();
+//     div.style.height=pickSize();
+//     div.setAttribute("class", "fancy");
+
+//     document.body.appendChild(div);;
     
+// }
+// // $(".item").mousemove(addSquare())
 
+// $(".main-content").mousemove(
 
-
+//     console.log(addSquare),
+//     addSquare
+// );

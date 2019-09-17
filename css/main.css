@@ -1,6 +1,7 @@
 /* General */
 body {
     background-color: #e6e6e6;
+    position: relative;
 }
 .main-content {
     margin-top: 50px;
@@ -30,6 +31,7 @@ p {
     font-weight: 400;
     font-size: 11pt;    
 }
+
 a {
     text-decoration: none;
     color: inherit;
@@ -68,6 +70,14 @@ footer {
 }
 footer p {
     text-align: center;
+}
+/* Background stuff */
+div.fancy {
+    z-index: 3;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+
 }
 
 /* Media Queries */

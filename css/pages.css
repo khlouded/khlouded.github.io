@@ -18,6 +18,9 @@ h2 {
 .maincontent h2 {
     color: #36966c;
 }
+header h2 {
+    color: #36966c;
+}
 h3 {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
@@ -26,14 +29,26 @@ h3 {
     font-size: 1.5em;
 }
 h4 {
-    font-weight: 400;
+    font-weight: 600;
     font-family: 'Lato', sans-serif;
-    padding: 10px 0 0 0;
+    padding: 20px 0 0 0;
     margin: 0px;
+    text-transform: uppercase;
 }
+
 p {
-    font-size: 10pt;
+    padding: 5px 0;
+    font-size: 12pt;
+    margin-top: 0px;
 }
+ul {
+    padding: 5px 0px 0px 20px ;
+    
+}
+ul ul {
+    padding: 0px 0 0 20px;
+}
+
 /*****************************
 Layout
 ****************************/
@@ -48,14 +63,22 @@ body {
     grid-template-columns: repeat(1, 1fr);
     padding: 0px;
     margin: 0px;
+    position: relative
+
 
 }
-.control{
+.control {
     display: grid;
     align-content: center;
     justify-self: center;
     max-width: 1080px;
 
+}
+hr {
+    color: #1a1a1a;
+    height: 2px;
+    background-color: #1a1a1a;
+    margin-bottom: 100px;
 }
 /* Navigation */
 nav a {
@@ -92,13 +115,36 @@ nav a:hover:after {
 }
 /* Header */
 header {
-    padding: 50px 0px;
+    height: 100px;
+    overflow: visible;
+    background-color: #1a1a1a;
+    color: #e6e6e6;
+    position:relative;
+    padding: 50px 15px;
+
+
+}
+header:after {
+    content: "";
+    position: absolute;
+    height: 200px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 110vw;
+    z-index: -3;
+    background-color: #1a1a1a;
+}
+header h1 {
+    color: #e6e6e6;
+
 }
 /* Content */
 .maincontent ul {
     margin: 5px 0;
 }
 .maincontent li {
+    font-size: 12pt;
 
 }
 .maincontent dt {
@@ -110,8 +156,37 @@ header {
     Margin-left: 0px;
     margin-bottom: 10px;
 }
+.maincontent h1 {
+    font-size: 21pt;
+    margin-top: 30px;
+}
+ul ~ p {
+    margin: 0;
+}
+.maincontent p + ul {
+    margin-bottom:20px;
+    margin-top:0;
+    padding-top:0;
+}
+dl {
+    padding-bottom: 20px;
+}
+
 /* Image Containers */
+.imggallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+}
 .imgbox {
-    display: inline-block;
-    vertical-align: top;
+    vertical-align: top; 
+    /* background-color: red; */
+    padding-bottom: 30px;
+}
+.imgbox img {
+    width: 100%;
+    margin: 10px 0 5px 0;
+}
+iframe {
+    margin: 10px 0 5px 0;
 }
