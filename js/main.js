@@ -11,7 +11,7 @@ $(document).ready(function(){
         $(this).css("color", color);
     }).mouseleave(function() {      
         //if not hovering on item
-        var main = "rgb(0,0,0,0.5)"
+        var main = "rgb(0,0,0,0.3)"
         $(this).css("color", main);
         //end if
     });    
@@ -95,16 +95,6 @@ $(document).ready(function fadein() {
 var mybutton = document.getElementById("backtotop");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-}
-
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
     document.body.scrollTop = 0;
