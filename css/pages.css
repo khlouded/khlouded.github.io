@@ -12,8 +12,8 @@ h1 {
 h1:hover {
     font-weight: 400;
 }
-h2 {
-
+.maincontent h2 {
+    font-size: 12pt;
 }
 .maincontent h2 {
     color: #36966c;
@@ -184,7 +184,6 @@ a.backtotop:hover {
 a.home {
     writing-mode: vertical-rl;
     padding: 50px 0 0 0;
-    margin: 0;
     -webkit-transform:rotate(-180deg);
     -moz-transform:rotate(-180deg);
     -o-transform:rotate(-180deg);
@@ -250,6 +249,7 @@ dl {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 10px;
+    max-width: 1080px;
 }
 .imgbox {
     vertical-align: top; 
@@ -259,8 +259,11 @@ dl {
     width: 100%;
     margin: 10px 0 5px 0;
 }
-iframe {
+.maincontent iframe {
     margin: 10px 0 5px 0;
+    width:1080px;
+    height:720px;
+
 }
 
 /* PDF Container */
@@ -276,6 +279,30 @@ a.pdfdocument {
     font-weight: 700;
     text-transform: uppercase;
     max-width: 200px;
+}
+@media only screen and (max-width: 1000px) and (min-width:901px) {
+    .maincontent {
+        padding: 15px;
+        display: grid;
+        align-content: top;
+        justify-self: center;
+        max-width: 900px;
+        overflow: scroll;
+        height: 100%;
+    }
+    .imggallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+        max-width: 900px;
+    }
+    .maincontent iframe {
+        margin: 10px 0 5px 0;
+        width:900px;
+        height:640px;
+    
+    }
+
 }
 @media only screen and (max-width: 900px) and (min-width:500px) {
     /* Typography fixes */
@@ -320,7 +347,6 @@ a.pdfdocument {
     }
     .mainnav a {
         padding: 5px 15px;
-        display:block;
         font-family: 'Oswald', sans-serif;
         font-weight: 300;
         transition: .2s;
@@ -334,12 +360,31 @@ a.pdfdocument {
     a.home {
         writing-mode: vertical-rl;
         padding: 50px 0 0 0;
-        margin: 0;
         -webkit-transform:rotate(-180deg);
         -moz-transform:rotate(-180deg);
         -o-transform:rotate(-180deg);
         transform:rotate(-180deg);
     }
+    .imggallery {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 00px;
+        max-width: 500px;
+    }
+    .maincontent {
+        padding: 15px;
+        display: grid;
+        align-content: top;
+        justify-self: center;
+        max-width: 500px;
+        overflow: scroll;
+        height: 100%;
+    }
+    .maincontent iframe {
+        margin: 10px 0 5px 0;
+        width:500px;
+        height:320px;
+    
 
 }
 @media only screen and (max-width: 499px) and (min-width:0px) {
@@ -397,7 +442,6 @@ a.pdfdocument {
     a.home {
         writing-mode: horizontal-tb;
         padding: 0 0 0 0;
-        margin: 0;
         -webkit-transform:rotate(0);
         -moz-transform:rotate(0);
         -o-transform:rotate(0);
@@ -409,4 +453,24 @@ a.pdfdocument {
         width: auto;
         display: inline-block;
     }
+    .imggallery {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 00px;
+        max-width: 480px;
+    }
+    .maincontent {
+        padding: 15px;
+        display: grid;
+        align-content: top;
+        justify-self: center;
+        max-width: 480px;
+        overflow: scroll;
+        height: 100%;
+    }
+    .maincontent iframe {
+        margin: 10px 0 5px 0;
+        width:480px;
+        height:320px;
+    
 }
