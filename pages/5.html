@@ -39,16 +39,26 @@
         <div class="maincontent ">
             <div class="content Oct08">
                 <h1>Design Considerations</h1>
-                <p>I spent a lot of time trying to figure out a usable structure before moving on to sketches. I went through a variety of iterations of how the structure of the content would be organized and what would make the most sense. Initially, I drew a lot of information from the <a href="https://apps.apple.com/us/app/nike-run-club/id387771637"> Nike Run Club App</a> and the <a href="https://www.withings.com/ca/en/health-mate" >Nokia Healthmate App</a>. I shifted the focus on the lessons, emphasizing components that promote improvement and learning. These elements include personalized tips and data driven recommendations. This device is speculative and will be able to record a multitude of performance data which can be analyzed in order to improve and micromanage the boarders skills. I have experience teaching snowboarding and can draw from the resources I have collected from trainings.</p>
+                <p>I spent a lot of time trying to figure out a usable structure before moving on to sketches. I went through a variety of iterations of how the structure of the content would be organized and what would make the most sense. Initially, I drew a lot of information from the <a href="https://apps.apple.com/us/app/nike-run-club/id387771637"> Nike Run Club App</a> and the <a href="https://www.withings.com/ca/en/health-mate" >Nokia Healthmate App</a>. I shifted the focus on the lessons, emphasizing components that promote improvement and learning. These elements include personalized tips and data driven recommendations. This device is speculative and will be able to record a multitude of performance data which can be analyzed in order to improve and micromanage the boarders skills. I have experience teaching snowboarding and can draw from the resources I have collected from trainings. However, beyond this there would be social interactions that include competitive routes and the ability to set your own routes. The device will track the information using stickers attached to the board or stickers on the board, or the board with all of the tracking ability can be purchased as well.</p>
+                <p>These are not fully updated yet.</p>
                 
                 <h1>User Personas</h1>
                 <h3>User 01 Alexi Romovik</h3>
                 <p>Alexi is a Beginner Snowboarder who is 42 years old. She wants to learn snowboarding as her kids are currently learning as well but never got the chance. She has no experience skiing and her children are starting to want to go to larger mountains. She wants to do it with them to make sure they are safe and she wanted to find a way to learn without burdening anyone or embarrassing herself with an instructor.</p>
                 <h3>User 02 Gavin Thrush</h3>
+                <p>Gavin Thrush- 17 year old. Pro snowboarder who wants to find others to meet others in the park and learn more advanced tricks and such. He loves to compete. The features he would mainly be using is the Social Mode. This is the first time he's using the AR device and tests it out with friends far away from a mountain.</p>
 
                 <h1>User Flows</h1>
-                <h3>User Flow 01 Alexi Uses the AR Device and then the phone to review her performance</h3>
-                <p>A</p>
+                <h3>User Flow 01 </h3>
+                <p>Alexi Uses the AR Device and goes through the first lesson and then she reviews her performance on the phone app.</p>
+
+                <ol>
+                    <li><strong>Turn On</strong> Alexi puts on the device for the first time. The device indicates powering on and a loading state.</li>
+                    <li><strong>Callibration</strong> The device orients itself in the world around it using visuals, sensory data, and GPS data.</li>
+                    <li><strong>Syncing</strong> The device asks to connect with your phone for data storage or cloud storage on the app.</li>
+                    <li><strong>Welcome</strong> </li>
+                </ol>
+                
 
                 <h1>Mid Fidelity</h1>
 
@@ -56,7 +66,7 @@
                 <a class="pdfdocument" href="https://www.figma.com/file/escdw6nKKmdzbOBzI5b0AE/Snowboard-AR_Phone-App?node-id=18%3A5099">Phone App Screens</a>
                 <a class="pdfdocument" href="https://www.figma.com/file/pAkhBvw0ZWw8ERZTUbrpUY/Snowboard-AR-_Goggles-Screen?node-id=0%3A1">AR Goggle Screens</a>
 
-                <h3>Prototype Link</h3>
+                <h3>Prototype Presentation Links</h3>
                 <a class="pdfdocument" href="https://www.figma.com/proto/escdw6nKKmdzbOBzI5b0AE/Snowboard-AR_Phone-App?node-id=18%3A186&viewport=1052%2C982%2C0.2609670162200928&scaling=scale-down">Phone App Screens</a>
                 <a class="pdfdocument" href="https://www.figma.com/proto/pAkhBvw0ZWw8ERZTUbrpUY/Snowboard-AR-_Goggles-Screen?node-id=1%3A3&viewport=-979%2C315%2C0.562328040599823&scaling=min-zoom">AR Goggle Screens</a>
                 
@@ -69,13 +79,20 @@
                 <h1>AR Device Architecture</h1>
                 <h3>Onboarding and Set Up</h3>
                 <p>A first time user will go through instructions on how to use the main components as it is important to know how to interact with it as AR is new and currently unintuitive.</p>
-                <h3>Physical Settings</h3>
+                <h3>Physical Action Buttons</h3>
+                <p>This button is the main physical control of the device. While the board is still will have different effects then when moving. While moving, tap once to take a photo and double tap to start recording. Hold to turn off the UI. While still, hold to access the menu to change modes. </p>
+                <h3>Physical Volume Buttons</h3>
+                <p>Holding the buttons at</p>
+                <h3>AR Interactions</h3>
+                <p>Your hands are used to interact with the buttons on the screen. Turning your hand pressed the button.</p>
+
                 <h3>Welcome Screen</h3>
                 <p>A screen showing the general location and the weather conditions and snow conditions. This would be like a good morning, and would only appear at the beginning of a session.</p>
                 <h3>Main Dashboard</h3>
                 <h3>Object Detection</h3>
                 <h4>Social Detection</h4>
                 <h4>Challenges and Events</h4>
+                <p>On regular mountains, the challenges and routes are already set. However if you make a new path, find new terrain or enter a new unexplored area, the device at the ending summary, will ask if you want to set a challenge. The end can be adjusted. </p>
                 <h3>Modes</h3>
                 
                 <h3>Default Mode</h3>
@@ -84,6 +101,7 @@
                 <h3>Features</h3>
                 <h3>Camera</h3>
                 <h3>Low Visibility</h3>
+                <p>Wipe the screen to enter low visibility mode. Low visibility mode is automatic on sections that have difficult visibility and isn't overly intrusive with some outline of irregular surfaces or edges of jumps or clifs.</p>
                 <h3>Voice Activiation</h3>
 
 
