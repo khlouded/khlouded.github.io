@@ -209,8 +209,7 @@ a.home {
     width: 10px;
 }
   /* Track */
-::-webkit-scrollbar-track {
-}
+
 
   /* Handle */
 ::-webkit-scrollbar-thumb {
@@ -232,6 +231,12 @@ ul ~ p {
     margin-bottom:40px;
     margin-top:0;
     padding-top:0;
+}
+.maincontent ol ul {
+    margin-top: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0;
 }
 dl {
     padding-bottom: 20px;
@@ -471,4 +476,5 @@ a.pdfdocument {
         width:480px;
         height:320px;
     
+}
 }

@@ -40,7 +40,9 @@
             <div class="content Oct08">
                 <h1>Design Considerations</h1>
                 <p>I spent a lot of time trying to figure out a usable structure before moving on to sketches. I went through a variety of iterations of how the structure of the content would be organized and what would make the most sense. Initially, I drew a lot of information from the <a href="https://apps.apple.com/us/app/nike-run-club/id387771637"> Nike Run Club App</a> and the <a href="https://www.withings.com/ca/en/health-mate" >Nokia Healthmate App</a>. I shifted the focus on the lessons, emphasizing components that promote improvement and learning. These elements include personalized tips and data driven recommendations. This device is speculative and will be able to record a multitude of performance data which can be analyzed in order to improve and micromanage the boarders skills. I have experience teaching snowboarding and can draw from the resources I have collected from trainings. However, beyond this there would be social interactions that include competitive routes and the ability to set your own routes. The device will track the information using stickers attached to the board or stickers on the board, or the board with all of the tracking ability can be purchased as well.</p>
-                <p>These are not fully updated yet.</p>
+
+                <h3>Points</h3>
+                <p>Points are based on a variety of things. The 'turn' quality calculator, combo and trick counter, distance, speed and # of falls are some elements that influence the amount of points a user would have. All of these points are counted together in a normal run. However, in a race, a specific point counter can be used to judge score, As some races are specifically for tricks. There are three types of races, Speed races, Trick races. Each race counts a specific counter and multiplies it by the race multiplier</p>
                 
                 <h1>User Personas</h1>
                 <h3>User 01 Alexi Romovik</h3>
@@ -50,17 +52,59 @@
 
                 <h1>User Flows</h1>
                 <h3>User Flow 01 </h3>
-                <p>Alexi Uses the AR Device and goes through the first lesson and then she reviews her performance on the phone app.</p>
-
+                <p>Alexi uses the AR Device and goes through the first lesson and then she reviews her performance on the phone app.</p>
+                <h4>AR Goggles</h4>
                 <ol>
-                    <li><strong>Turn On</strong> Alexi puts on the device for the first time. The device indicates powering on and a loading state.</li>
+                    <li><strong>Turn On</strong> She puts on the goggles for the first time and turns on the device by pressing the action button. The device indicates powering on and a loading state. Potentially be a sticker on the goggles indicating that the action button needs to be pressed to turn on.</li>
                     <li><strong>Callibration</strong> The device orients itself in the world around it using visuals, sensory data, and GPS data.</li>
-                    <li><strong>Syncing</strong> The device asks to connect with your phone for data storage or cloud storage on the app.</li>
-                    <li><strong>Welcome</strong> </li>
+                    <li><strong>Syncing</strong> The device asks to connect with your phone for data storage or cloud storage on the app. She syncs the device to her phone but since she hasn't set up the app, the sync does not work. The device informs her that she should sync when she goes on her phone.</li>
+                    <li><strong>Welcome</strong> Informs user of location, coordinates, user profile, weather condistions, snow conditions, which can be click on and expanded. This screen fades out and is only on for about three seconds.</li>
+                    <li><strong>Onboarding</strong> Going over the main and important UI and icons.</li>
+                    <ul>
+                        <li><strong>Safety</strong> Possible dangers of distracted snowboarding. If overwhelmed turn off the UI by holding the action button. This device will call emergency services or those nearby when detecting low levels of consciousness, heart rate, and internal temperature. </li>
+                        <li><strong>Physical Buttons</strong> This screen will have a clicable button to skip.
+                            <br />1. A user can interact with the UI elements by placing their hand on it in the interface and turning it.
+                            <br />2. If the action button is held long while still the power and settings will open up. If the action button is double taped, the mode menu will pop up. Single click to take a photo at any moment
+                            <br />3. The volume buttons can be held together in order to mute the 
+                        </li>
+                        <li><strong>Main Modes</strong> These modes can be accessed by double taping the action button while still.
+                            <br />1. Default Mode - This mode allows users to 
+                            <br />2. Lessons Mode - This mode allows users to follow a guided lesson on any topic in snowboarding.
+                            <br />3. Focus Mode - This mode allows you to focus on a single skill and provides the data needed while minimizing everything else.
+                        </li>
+                        <li><strong>Other Actions</strong> 
+                            <br />1. Click the action button once to take a photo, double click to take a video.
+                            <br />2. Low Visibility Mode can be turned on by wiping your hand across the goggles.
+                            <br />3. Turn off and on the UI by holding the action button.
+                        </li>
+                    </ul>
+                    <li><strong>Survey</strong> This is to see what level they are at, in order to check if they want to learn or practice. </li>
+                    <ul>
+                        <li><strong>Survey Part One</strong> Choosing what level the user is at
+                            <br />1. Beginner - Is new to snowboarding, and has never picked up a snowboard.
+                            <br />2. Intermediate - Understands the basics of turning.
+                            <br />3. Advanced - Knows turning and snowboarding well. This opens up a dialogue that.
+                            <br />4. Diagnostic - Opens a test for the user, with AR obstacles and specific skills to assess the user, starting from basics to higher levels.
+                        </li>
+                        <li><strong>Survey Part Two</strong> The user is given two options, guided or unguided. The guided mode will start them off in a lesson, giving the option to brose through the levels., unguided will put it on default mode. These options are the same for all levels but the starting lesson will be different.</li>
+                    </ul>                  
+                    <li><strong>Title Screen</strong> They picked the guided beginner option. The first lesson is : Lesson One, Equipment. In this section they see a summary of the lesson and what they will learn, as well as the approximate time. The user will have the option to play, skip (go to the next section of the lesson) , browse (lead to the lesson browser) or leave (which will go to default mode)</li>
+                    <li><strong>Lesson</strong>The user will follow a ghost or AR instructor who explains the basics of a snowboard. The path that the user should follow for the lesson is also shown. Any important data points will be displayed on the bottom right.</li>
+                    <li><strong>End of Lesson</strong> This will be a quick summary of the lesson. It will show your tota points, time, skills, achievements, and give a tip or two on improvements. In this screen you have actions to Replay, Browse, Next Lesson (Automatic start), Leave. View more data in the app.</li>
+                    <li><strong>Lesson Browser</strong> Alexi selects the browser option and looks through the various lessons.</li>
+                    <li><strong>Shut Down Machine</strong> She holds the action button and accesses the power option and shuts down the device. Then she opens the phone.</li>
                 </ol>
+                <h4>Phone App</h4>
+                <ol>
+                    <li><strong>Open the app</strong> Alexis opens the app and sees a welcome screen</li>
+                    <li><strong>Log in & Create Account</strong> She sets up her account</li>
+                    <li><strong>Consent</strong>She allows access to her data for analysis.</li>
+                    <li><strong></strong></li>
+                </ol>                
                 
 
                 <h1>Mid Fidelity</h1>
+                <p>Colourless mockups and states depicting specific user flows through the app.</p>
 
                 <h3>Figma File links</h3>
                 <a class="pdfdocument" href="https://www.figma.com/file/escdw6nKKmdzbOBzI5b0AE/Snowboard-AR_Phone-App?node-id=18%3A5099">Phone App Screens</a>
@@ -72,30 +116,38 @@
                 
                 <h1>Low Fidelity</h1>
                 <p>These are composed of only a couple of the screens, showcasing general experiments in layout and content management, informing the structural decisions of the app.</p>
-                <a class="pdfdocument" href="#">Phone App Screens</a>
-                <a class="pdfdocument" href="#">AR Goggle Screens</a>
+                <a class="pdfdocument" href="../files/YSDN4003_TranKhav_LowFidelityScreen.pdf">Sketches & Screens</a>
                 
 
                 <h1>AR Device Architecture</h1>
                 <h3>Onboarding and Set Up</h3>
                 <p>A first time user will go through instructions on how to use the main components as it is important to know how to interact with it as AR is new and currently unintuitive.</p>
                 <h3>Physical Action Buttons</h3>
-                <p>This button is the main physical control of the device. While the board is still will have different effects then when moving. While moving, tap once to take a photo and double tap to start recording. Hold to turn off the UI. While still, hold to access the menu to change modes. </p>
+                <p>This button is the main physical control of the device. While the board is still will have different effects then when moving. While moving, tap once to take a photo and double tap to start recording. Hold to turn off the UI. While still, hold to access the menu to change modes and access the power options. </p>
                 <h3>Physical Volume Buttons</h3>
-                <p>Holding the buttons at</p>
+                <p>Holding the buttons at the same time will mute or unmute the audio.</p>
                 <h3>AR Interactions</h3>
-                <p>Your hands are used to interact with the buttons on the screen. Turning your hand pressed the button.</p>
-
+                <p>Your hands are used to interact with the buttons on the screen. Turning your hand presses the button.</p>
+                <h3>Voice Interactions</h3>
+                <p>A user can do all of the same interactions through voice. Through voice, you can also answer calls, send messages, and notify the group of members you may be travelling with.</p>
+                <h3>Sending and Recieving Messages</h3>
+                <p>A user can get or recieve messages. This can be to other users around you or to people in your phone contacts. You can also voice chat or communicate with either people around you or a select group of people. This is done by hovering the cursor over someone or saying their name. </p>
+                <h3>Setting Race routes</h3>
+                <p>To set a race route, you first need to be still and then hold the action button to access the menus, There would be an option to set a race route. </p>
                 <h3>Welcome Screen</h3>
                 <p>A screen showing the general location and the weather conditions and snow conditions. This would be like a good morning, and would only appear at the beginning of a session.</p>
+                <h3>Syncing and Callibration</h3>
+                <p>The sync screen will only show up the first time you connect to a device. When using the device later on, it will sync passively with the phone using bluetooth.</p>
                 <h3>Main Dashboard</h3>
+                <p>Contains speed, time, and location that will always be available. The sync, callibration, volume, and biometrics will only show information when required.</p>
                 <h3>Object Detection</h3>
                 <h4>Social Detection</h4>
                 <h4>Challenges and Events</h4>
                 <p>On regular mountains, the challenges and routes are already set. However if you make a new path, find new terrain or enter a new unexplored area, the device at the ending summary, will ask if you want to set a challenge. The end can be adjusted. </p>
                 <h3>Modes</h3>
-                
+                <p>There are 3 main selectable modes that allow for specific features. All modes include safety features, such as danger detection and low visibility settings. Users can call and interact with each other. </p>
                 <h3>Default Mode</h3>
+                <p>This mode allows for people to interact with each other,</p>
                 <h3>Instructor Mode</h3>
                 <h3>Focus Mode</h3>
                 <h3>Features</h3>
@@ -106,22 +158,19 @@
 
 
                 <h1>Phone Architecture</h1>
-                <p>The purpose of the phone is to provide an accessible and safe space for review and improvement. The </p>
+                <p>The purpose of the phone is to provide opportunity for more detailed and analytical review and improvement, as well as connecting people together. </p>
                 <h3>Navigation</h3>
                 <p>The Bottom Bar contains the Statistics, Media, Lesson Browser, Community, Device. The Top Bar on the main pages contains the Profile and an Action button depending on the page. Each section can be swiped left or right and would contains sub sections inside of them. This style of navigation is simple to the Nike Run App and is a method of organizing a large amount of content of different sections that seems effective.</p>
-
                 <h3>Statistics</h3>
                 <h4>Summary</h4>
                 <p>This section gives some overall statistics of the users information. This section can be accessed and clicked on for more detailed statistics</p>
-                <p>The main information given is Total Distance</p>
-
-            
+                <p>The main information given is Total Distance, Total # of Runs</p>
                 <h4>History</h4>
-                <p>Runs will be different colours depending on the three modes, default, focus, and lessons</p>
-
-
+                <p>Runs will be different colours depending on the three modes, default, focus, and lessons. Runs will be grouped by session and location. The run information will show the distance, total points, date, time, and location. There would be a graphic depicting a general outline of the run.</p>
+                <p>E</p>
                 <h4>Individual Runs Details</h4>
-                <p>No main navigation</p>
+                <p>This page would showcase that specific run and any data that a user may possibly need. There would be a video or run walkthrough section, allowing the user to scroll through the run, looking through various data points in a timeline about the run.</p>
+                <p>A user will also have access to summary information and a </p>
                 <h4>Session Summary</h4>
 
                 <h4>Achievements</h4>
@@ -140,12 +189,14 @@
                 <h3>Devices</h3>
                 <h4>Your Device</h4>
                 <h4>Shop</h4>
+                <p>Where people can buy a device online or browse through the ones available. This links out to </p>
+
                 <h3>Profile</h3>
                 <h4>Account Settings</h4>
                 <h4>Friends</h4>
                 
                 <h4>Inbox</h4>
-                <p>DM or group messages</p>
+                <p>DM or group messages. This would be how people communicate</p>
 
 
                 
