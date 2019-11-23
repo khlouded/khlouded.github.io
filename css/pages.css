@@ -247,6 +247,7 @@ dl {
 ul.cascadinglist {
     list-style: none;
 }
+
 /* Image Containers */
 .imggallery {
     display: grid;
@@ -283,6 +284,7 @@ a.pdfdocument {
     text-transform: uppercase;
     max-width: 200px;
 }
+
 @media only screen and (max-width: 1000px) and (min-width:901px) {
     .maincontent {
         padding: 15px;
