@@ -800,7 +800,7 @@ section.lessons::before {
     clip-path: polygon(100% 0, 0 0, 100% 30%);
 }
 section.lesson2 {
-    height: 40vH;
+    height: 60vH;
 }
 section.lesson3 {
     height: 80vH;
@@ -857,7 +857,7 @@ section.social2 {
     height: 70vH;
 }
 
-section.social::before {
+section.social2::before {
     content: "";
     position: absolute;
     top: 0; left: 0;
@@ -881,12 +881,13 @@ section.footer::before {
     width: 100%; height: 100%;
     background: url(../imgs/Photography/sky.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-position:  0 -70vH;
     filter: brightness(75%);
 }
 section.footer .content-grid {
     height: 100%;
+    justify-items: center;
 }
 .footer .grid-item{
     grid-column-end: span 3;
@@ -918,7 +919,7 @@ section.footer .content-grid {
 .footer input[type=text] {
     color: #535B5A;
     font-family: 'Roboto', sans-serif;
-    font-size: 12pt;
+    font-size: 11pt;
     display: inline-block;
     padding: 4px 15px;
     margin-right: 15px;
@@ -926,12 +927,13 @@ section.footer .content-grid {
     border-radius: 2px;
     box-sizing: border-box;
     height: 40px;
+    width: 150px;
 }
 .footer input[type=submit] {
     background-color: #77D2C7;
     color: #535B5A;
     font-family: 'Roboto', sans-serif;
-    font-size: 12pt;
+    font-size: 11pt;
     display: inline-block;
     padding: 4px 15px;;
     margin-right: 15px;
@@ -950,4 +952,88 @@ section.footer .content-grid {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+@media only screen and (max-width: 1749px)  {
+    .footer .grid-item{
+        grid-column-end: span 3;
+    }
+    section.footer .content-grid {
+        grid-template-columns: repeat(6, 1fr [grid]);
+    }
+}
+@media only screen and (max-width: 949px)  {
+    h1 {
+        font-size: 18pt;
+    }
+    h2 {
+        font-size: 14pt;
+    }
+    .textbox.left {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+
+    }
+    .textbox.right {
+        grid-column-start: 10;
+        grid-column-end: span 2;
+    }
+}
+
+@media only screen and (max-width: 700px)  {
+    .content-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr [grid]);
+        padding: 0 40px;
+        position:relative;
+        align-items: center;
+        vertical-align: middle;
+        z-index: 10;
+    }
+    h1 {
+        font-size: 18pt;
+    }
+    h2 {
+        font-size: 14pt;
+    }
+    .textbox.left {
+        grid-column-start: 1;
+        grid-column-end: span 5;
+
+    }
+    .textbox.right {
+        grid-column-start: 1;
+        grid-column-end: span 5;
+    }
+    nav a.home-icon h1 {
+        font-size: 12pt;
+        top:0;
+    }
+    .dropdown-size {
+        height: 260px;
+    }
+    .dropdown-size2 {
+        height: 460px;
+    }
+    .dropdown-nav {
+        opacity: 0;
+        pointer-events: none;
+        transition: .8s;
+        padding: 0 40px;
+        height: 200px;
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .dropdown-dropdown-nav {
+        opacity: 0;
+        pointer-events: none;
+        transition: .8s;
+        padding: 0 40px;
+        height: 200px;
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
 }
