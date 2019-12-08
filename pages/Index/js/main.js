@@ -47,6 +47,7 @@ function navScroll(){
 	var spot = $("#review").position(); 	// This is where the sticky appears
 	var spot2 = $("#review2").position(); // This is where the contents of the sticky changes image
 	var spacing = 55;
+	var spacing2 = 155;
 	$(window).scroll(function() {  //adding a scroll function to the window  
 		// a variable that is a number that describes how far you have scrolled
 		var wScroll = $(window).scrollTop();
@@ -75,7 +76,7 @@ function navScroll(){
 			});
 			
 		}
-		if (wScroll >= $(".lesson2").position().top - 230) { 
+		if (wScroll >= $(".lesson2").position().top - 430) { 
 			$('.points-graph').each(function(i){
 				setTimeout(function(){
 					$('.points-graph').eq(i).addClass("introslide");	
@@ -107,6 +108,20 @@ function navScroll(){
 			$('.s1').addClass('sharedevice')
 		} else {
 			$('.s1').removeClass('sharedevice')
+		}
+		//second sticky phone screen
+		if (wScroll >= $(".lessons").position().top - 70 && wScroll < $(".lesson3").position().top - spacing2) { // Sticky Phone Screen
+			$(".m5").addClass("sticky");
+			$(".s2").addClass("fixed");
+		} else {
+			$(".m5").removeClass("sticky");	
+			$(".s2").removeClass("fixed");
+		}
+		if (wScroll > $(".lesson3").position().top - spacing2) { // removing the fixed object and making it relative again
+			$(".m7").addClass("fixed");
+		} else {
+			$(".m7").removeClass("fixed");
+			
 		}
 		console.log(wScroll);
 	});

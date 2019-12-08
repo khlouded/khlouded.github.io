@@ -350,14 +350,27 @@ section {
     display:none;
     grid-column-start: 2;
     grid-column-end: span 2;
-    transform: translateX(-16px);
+    transform: translateX(-13px);
     background-image: url(../imgs/mockups/stats_nocursor.gif);
+    background-position: center;
+    background-size:  auto 57.23vH;
+    background-repeat: no-repeat;
+}
+.s2 {
+    position: relative;
+    z-index: 150;
+    display:none;
+    transform: translateX(-3.3vw);
+    background-image: url(../imgs/mockups/coach.gif);
     background-position: center;
     background-size:  auto 57.23vH;
     background-repeat: no-repeat;
 }
 .m4 {
     display: none;
+}
+.m7 {
+    display:none;
 }
 .sharedevice {
     background-image: url(../imgs/mockups/media.gif);
@@ -371,7 +384,8 @@ section {
     top: 0;
     left: 0;
     height: 100VH;
-    width: 100VW;
+    width: inherit;
+    margin: 0;
 }
 /* ******************Section Header */
 section.header {
@@ -392,9 +406,6 @@ section.header {
     background-attachment: fixed;
     z-index: 1;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
-}
-.header .mockupscreen {
-
 }
 .header .content-grid {
     height: 100vH;
@@ -494,6 +505,7 @@ section.introduction::before {
 }
 .charts-graph {
     transform: translateX(100vW);
+    -webkit-filter: drop-shadow(0px 0px 20px rgba(5, 5, 5, .2));
     filter: drop-shadow(0px 0x 20px rgba(5, 5, 5, .2));
     height: 150px;
     transition: .4s;
@@ -501,7 +513,8 @@ section.introduction::before {
     padding: 0 30px 30px 0;
 }
 .points-graph {
-    transform: translateX(100vW);
+    transform: translateX(-100vW);
+    -webkit-filter: drop-shadow(0px 0px 20px rgba(5, 5, 5, .2));
     filter: drop-shadow(0px 0x 20px rgba(5, 5, 5, .2));
     height: 150px;
     transition: .4s;
@@ -661,13 +674,14 @@ section.review3 {
 .media-object {
     width: 100%;
     height: 100%;
-    background: #2D2D2D;
     border-radius: 8px;
     position: relative;
     cursor: pointer;
     margin: 0 auto;
     background-size: cover;
     background-position: center;
+    -webkit-filter: drop-shadow(0px 0px 20px rgba(5, 5, 5, .2));
+    filter: drop-shadow(0px 0x 20px rgba(5, 5, 5, .2));
 }
 .media-object p {
     color: #FDFDFD;
@@ -724,12 +738,16 @@ section.review3 {
     color: #FDFDFD;
     mix-blend-mode: difference;
     position: fixed;
+    font-size: 18pt;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif; 
     top: 10vH;
     left: 5vW;
 
 }
 /* Associates */
 .associates {
+    margin-top: 35px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px;
@@ -782,24 +800,76 @@ section.lessons::before {
     clip-path: polygon(100% 0, 0 0, 100% 30%);
 }
 section.lesson2 {
+    height: 40vH;
+}
+section.lesson3 {
     height: 80vH;
 }
-section.lesson2 {
-    height: calc(100vH - 60px);
-}
-section.lesson2::before {
+
+section.lesson3::before {
     content: "";
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: url(../imgs/Photography/mountainsdirt.jpg);
+    background: url(../imgs/Photography/mountainstall.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    filter: grayscale(80%) brightness(70%);
-    clip-path: polygon(100% 81%, 0 100%, 100% 100%);
+    filter: grayscale(60%) brightness(70%);
+    clip-path: polygon(100% 75%, 0% 100%, 100% 100%);
 }
+
+/* AR Screen */
+.ar-object {
+    height: 400px;
+    width: 100%;
+    background-image: url(../imgs/mockups/ar_screen.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    justify-self: start;
+    border-radius: 0;
+}
+.lessons .textbox {
+    margin-top: 150px;
+}
+/* Social Seciton */
+section.social {
+    margin-top: -1px;
+    height: 70vH;
+}
+
+section.social::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url(../imgs/Photography/mountainstall.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    filter: grayscale(60%) brightness(70%);
+    clip-path: polygon(100% 0, 0 0, 0 28%);
+}
+section.social2 {
+    height: 70vH;
+}
+
+section.social::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url(../imgs/Photography/sky.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    filter: brightness(75%);
+    clip-path: polygon(100% 100%, 100% 66%, 0 100%);
+}
+
 /* *********************Footer Animation */
 section.footer {
     height: 60vH;
@@ -812,14 +882,13 @@ section.footer::before {
     background: url(../imgs/Photography/sky.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position:  0 -70vH;
     filter: brightness(75%);
 }
 section.footer .content-grid {
     height: 100%;
 }
-.social-icons {
-    grid-column-start: 1;
+.footer .grid-item{
     grid-column-end: span 3;
     
 }
@@ -829,22 +898,56 @@ section.footer .content-grid {
 .footer p {
     color: #FDFDFD;
     display:inline-block;
+    padding: 0 15px;
 }
 .footer .download a {
     display: inline-block;
-    padding: 0 0 0 30px;
 }
 .footer .download {
-    grid-column-start: 4;
-    grid-column-end: span 4;
     display: flex;
     align-items: center;
 }
 .footer .email {
-
+    display: flex;
+    align-items: center;
+}
+.footer .logo {
+    display: flex;
+    align-items: center;
 }
 .footer input[type=text] {
-    color: #FDFDFD;
+    color: #535B5A;
     font-family: 'Roboto', sans-serif;
-    font-size: 14pt;
+    font-size: 12pt;
+    display: inline-block;
+    padding: 4px 15px;
+    margin-right: 15px;
+    border: none;
+    border-radius: 2px;
+    box-sizing: border-box;
+    height: 40px;
+}
+.footer input[type=submit] {
+    background-color: #77D2C7;
+    color: #535B5A;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12pt;
+    display: inline-block;
+    padding: 4px 15px;;
+    margin-right: 15px;
+    border: none;
+    border-radius: 2px;
+    box-sizing: border-box;
+    height: 40px;
+
+}
+.footer .email {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footer form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
