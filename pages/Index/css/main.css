@@ -1,0 +1,850 @@
+/*testing*/
+/* font-family: 'Rubik', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+/* Colours */
+/* 
+    Green #77D2C7
+    Green Highlight #BCFFF7
+    Base #CDEEEB
+    Blue #82B7DC
+    Error #FF8C8C
+    Transparency rgba( 76, 76, 76, 50%)  #FF8C8C
+    Text #535B5A
+    Grey #D3D6D6
+    Ground #EEEEEE
+    Light #FDFDFD
+*/
+/* Main Typography */
+
+h1 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 36pt;
+    font-weight: 700;
+    color: #535B5A;
+    margin-bottom :20px;
+    position: relative;
+}
+h2 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 18pt;
+    line-height: 27pt;
+    color: #535B5A;
+    margin-top: 20px;
+    position: relative;
+}
+h3 {
+    font-size: 18pt;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    line-height: 21pt;
+}
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
+    line-height: 16pt;
+    color: #535B5A;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 11pt;
+    line-height: 16pt;
+    color: #2D2D2D;
+}
+/* Main Styling & Colours */
+html {
+    width:100%;
+}
+body {
+    background: #EEEEEE;
+    padding: 0;
+    margin: 0;
+    color: #535B5A;
+    width: 100%;
+}
+/* Textbox settings */
+.textbox h1 {
+    margin-top: 0;
+}
+.textbox h4 {
+    margin-bottom: 10px;
+}
+.textbox h2 {
+    margin-bottom: 10px;
+}
+.textbox p {
+    margin-bottom: 30pt;
+}
+/* ******************Navigation*************** */
+nav {
+    background: #2D2D2D;
+    width: 100%;
+    display: flex;
+    color:#FDFDFD;
+    flex-direction: column;
+    z-index: 100;
+    position: fixed;
+    height: 60px;
+    overflow: hidden;
+    transition:.5s;
+
+}
+/* main nav styl=ing */
+.bottom-nav {
+    height: 60px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+nav::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url(../imgs/photography/skid.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    opacity: .2;
+}
+/* push background image back */
+.inside-nav {
+    position:relative;
+}
+/* nav typography */
+/* main title */
+nav h1 {
+    color:#FDFDFD;
+    display: inline-block;
+    font-size: 18pt;
+}
+a.home-icon img {
+    display: inline-block;
+    height: 40px;
+    align-self: center;
+    margin-right: 10px;
+    vertical-align: middle;
+    margin-top: -10px;
+}
+nav h3 {
+    margin: 0;
+}
+nav p {
+    color:#FDFDFD;
+    margin: 10px 0;
+    font-weight: 300;
+}
+nav li {
+    display: inline-block;
+    font-family: 'Rubik', sans-serif;
+}
+nav a {
+    text-decoration: none;
+    display: inline-block;
+    color: #FDFDFD;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 30px 0 0;
+    font-size: 11pt;
+    font-weight: 300;
+    transition: .5s;
+    vertical-align: middle;
+}
+nav a:hover {
+    color:#FF8C8C;
+
+}
+nav a.active h3, nav a.active p{
+    color: rgb(139, 139, 139);
+    font-weight: 600;
+}
+
+/* fixing the login and the shopping position */
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items:center;
+    vertical-align: middle;
+}
+.shopping {
+    padding:0;
+    filter: brightness(150%) grayscale(100%);
+}
+.shopping:hover {
+    filter: brightness(100%) grayscale(0%);
+}
+
+/* Menu button */
+button {
+    display: inline-block;
+    border: none;
+    padding: 0 30px 0 0 ;
+    margin: 0;
+    text-decoration: none;
+    background: none;
+    color: #FDFDFD;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    text-align: center;
+    transition: .5s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+nav button p{
+    color:#FDFDFD;
+    transition: .5s;
+}
+nav button p:hover {
+    color:#FF8C8C;
+}
+.menu-item span {
+    width: 60px;
+    height: 1px;
+    background: #FDFDFD;
+    display: inline-block;
+    transition: .5s;
+}
+p.menu-item {
+    display: inline-block;
+    padding-left: 10px;
+}
+.menu-item:hover span {
+    background: #FF8C8C;
+}
+
+/* dropdown */
+.dropdown-size {
+    height: 260px;
+}
+.dropdown-size2 {
+    height: 460px;
+}
+.dropdown-nav {
+    opacity: 0;
+    pointer-events: none;
+    transition: .8s;
+    padding: 0 40px;
+    height: 200px;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.dropdown-dropdown-nav {
+    opacity: 0;
+    pointer-events: none;
+    transition: .8s;
+    padding: 0 40px;
+    height: 200px;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+ul.dropdown-menu {
+    padding: 0;
+    
+}
+.dropdown-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.visible-dropdown {
+    opacity: 1; 
+    pointer-events: all;
+}
+/* Makes the other elements less visible */
+.less-style {
+    opacity: .3;
+}
+/* adding a line */
+.down {
+    border-top: .5px solid #535B5A;
+    display: flex;
+}
+
+/****************************** Grid ****************************/
+section {
+    position: relative;
+}
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr [grid]);
+    padding: 0 40px;
+    position:relative;
+    align-items: center;
+    vertical-align: middle;
+    z-index: 10;
+}
+.grid-item {
+    position: relative;
+    z-index: 50;
+}
+
+/* Positioning */
+/* Changing the image on the background */
+.MapScreen {
+    background-image: url(../imgs/mockups/WelcomeScreen.gif);
+}
+
+/* main textbox image position */
+.tleft {
+    grid-column-start: 2;
+    grid-column-end: span 5;
+    
+}
+.tright {
+    grid-column-start: 6;
+    grid-column-end: span 5;
+}
+/* main mockup positioning */
+.mleft {
+    grid-column-start: 2;
+    grid-column-end: span 2;
+}
+.mright {
+    grid-column-start: 9;
+    grid-column-end: span 3;
+}
+/* Assets and objects */
+.mockupscreen {
+    -webkit-filter: drop-shadow(0px 0px 20px rgba(5, 5, 5, .2));
+    filter: drop-shadow(0px 0x 20px rgba(5, 5, 5, .2));
+    height:60vH;
+    width:30.09vH;
+    position:relative;
+    justify-self: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.mockup-frame {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: auto;
+}
+.mockup-content {
+    position: relative;
+    /*Small Sizes
+    width:230px;
+    height: 498px; */
+    width:26.39vH;
+    height: 57.23vH;
+    background: green;
+    margin: auto;
+}
+
+/* Scroll Effects */
+.sticky {
+    visibility: hidden;
+}
+.s1 {
+    position: relative;
+    z-index: 150;
+    display:none;
+    grid-column-start: 2;
+    grid-column-end: span 2;
+    transform: translateX(-16px);
+    background-image: url(../imgs/mockups/stats_nocursor.gif);
+    background-position: center;
+    background-size:  auto 57.23vH;
+    background-repeat: no-repeat;
+}
+.m4 {
+    display: none;
+}
+.sharedevice {
+    background-image: url(../imgs/mockups/media.gif);
+}
+.fixed {
+    display: flex;
+}
+.stickybox {
+    pointer-events: none;
+    position:fixed;
+    top: 0;
+    left: 0;
+    height: 100VH;
+    width: 100VW;
+}
+/* ******************Section Header */
+section.header {
+    background: #EEEEEE;
+    background-size: cover;
+    height: 120vH;
+    overflow:hidden;
+}
+.headerbackground {
+    /* content: ""; */
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url(../imgs/Photography/mountainstall.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+.header .mockupscreen {
+
+}
+.header .content-grid {
+    height: 100vH;
+}
+.right{
+    grid-column-start: 9;
+    grid-column-end: span 2;
+}
+.header .content-grid .textbox h1 {
+    color: #FDFDFD;
+}
+.header .content-grid .textbox h2 {
+    color: #FDFDFD;
+    font-weight: 500;
+    text-align: right;
+}
+.left {
+    grid-column-start: 3;
+    grid-column-end: span 2;
+}
+.m1 {
+    position: relative;
+    z-index: 100;
+    display:flex;
+    transform: translateX(-16px);
+    background-image: url(../imgs/mockups/WelcomeScreen.gif);
+    background-position: center;
+    background-size:  auto 57.23vH;
+    background-repeat: no-repeat;
+}
+.stickybox2 {
+    pointer-events: none;
+    position:fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.syncingdevice {
+    background-image: url(../imgs/mockups/Syncing.gif);
+}
+/* **********************************Section Introduction */
+section.introduction {
+    height: calc(100vH);
+}
+section.introduction::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url(../imgs/Photography/mountainsfog.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    filter: grayscale(30%) brightness(70%);
+    clip-path: polygon(100% 80%, 0% 100%, 100% 100%);
+    
+}
+.m2 {
+    visibility: hidden;
+    z-index: 50;
+}
+.show {
+    visibility: visible;
+}
+/* Download Section */
+.button {
+    cursor: pointer;
+}
+.download a {
+    margin-right: 10px;
+}
+.headgear-item {
+    position: relative;
+    grid-column-start: 8;
+    grid-column-end: span 1;
+    height: 50vH;
+    display: flex;
+    align-items: end;
+    width: auto;
+    z-index: 1000;
+}
+
+.headgear-item img {
+    position: absolute;
+    margin-left: -350px;
+    margin-top: 45vh;
+    width: auto;
+    height: 400px;
+    transition: .6s;
+
+}
+.charts-graph {
+    transform: translateX(100vW);
+    filter: drop-shadow(0px 0x 20px rgba(5, 5, 5, .2));
+    height: 150px;
+    transition: .4s;
+    display: inline-block;
+    padding: 0 30px 30px 0;
+}
+.points-graph {
+    transform: translateX(100vW);
+    filter: drop-shadow(0px 0x 20px rgba(5, 5, 5, .2));
+    height: 150px;
+    transition: .4s;
+    display: inline-block;
+    padding: 0 30px 30px 0;
+}
+.slidein {
+    transform: translateX(100vW);
+}
+.introslide {
+    transform: translateX(0vW);
+}
+/* *************************Section Image motivation */
+section.image {
+    height: calc(50vH);
+    background: #77D2C7;
+    margin-top: -1px;
+}
+
+section.image .content-grid {
+    height: 100%;
+}
+.content-grid > h1 {
+    align-self:center;
+    grid-column-start: 2;
+    grid-column-end: span 10;
+    text-align:center;
+    color: #FDFDFD;
+}
+.content-grid > h2 {
+    align-self:center;
+    grid-column-start: 2;
+    grid-column-end: span 10;
+    font-weight: 400;
+    line-height: 50px;
+    text-align:center;
+    color: #FDFDFD;
+}
+section.image::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../imgs/Photography/mountainsfog.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    filter: grayscale(30%) brightness(70%);
+}
+section.quote1::before {
+    background: url(../imgs/Photography/mountainsridge.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    filter: grayscale(60%) brightness(70%);
+}
+section.quote2::before {
+    background: url(../imgs/Photography/mountainstall.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    filter: grayscale(60%) brightness(70%);
+}
+/* Review Section**************************** */
+section.review {
+    height: 100vh;
+}
+section.review::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url(../imgs/Photography/mountainsfog.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    clip-path: polygon(100% 0, 0 0, 0 30%);
+    filter: grayscale(30%) brightness(70%);
+}
+.review .textbox {
+    margin-top: 250px;
+}
+
+.charts-graph img {
+    height: 100%;
+    width: auto;
+
+}
+section.review2 {
+    height: 100vH;
+    margin-top: -1px;
+}
+section.review2::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url(../imgs/Photography/mountainsridge.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    clip-path: polygon(100% 100%, 0 85%, 0 100%);
+    filter: grayscale(60%) brightness(70%);
+}
+/* section.review2::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url(../imgs/Photography/mountainsridge.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    clip-path: polygon(0 0, 0 23%, 100% 0);
+    filter: grayscale(100%) brightness(120%);
+} */
+.review2 .textbox {
+    margin-top: 10vH;
+}
+section.review3 {
+    height: 70vH;
+}
+/* section.review3::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url(../imgs/Photography/mountainsridge.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    clip-path: polygon(100% 90%, 0 100%, 100% 100%);
+    filter: grayscale(100%) brightness(120%);
+} */
+
+/* Image holder */
+.media-holder {
+    grid-column-start: 6;
+    grid-column-end: span 7;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px 150px 150px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: start;
+    align-items: center;
+}
+
+.media-object {
+    width: 100%;
+    height: 100%;
+    background: #2D2D2D;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+}
+.media-object p {
+    color: #FDFDFD;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    margin: 0;
+    mix-blend-mode: difference;
+}
+.o1 {
+    background-image: url(../imgs/Photography/media/1.jpg);
+}
+.o2 {
+    background-image: url(../imgs/Photography/media/2.jpg);
+}
+.o3 {
+    background-image: url(../imgs/Photography/media/3.jpg);
+}
+.o4 {
+    background-image: url(../imgs/Photography/media/4.jpg);
+}
+.o5 {
+    background-image: url(../imgs/Photography/media/5.jpg);
+}
+.o6 {
+    background-image: url(../imgs/Photography/media/6.jpg);
+}
+.fullscreenbox {
+    width: 100%;
+    height: 100%;
+    background: #2D2D2D;
+    display: none;
+    z-index: 200;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    cursor: pointer;
+    bottom: 0; 
+    background-image: url('image.jpg') no-repeat center; 
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.fullscreenbox p {
+    color: #FDFDFD;
+    mix-blend-mode: difference;
+    position: fixed;
+    top: 5vH;
+    left: 5vW;
+
+}
+.fullscreenbox h4 {
+    color: #FDFDFD;
+    mix-blend-mode: difference;
+    position: fixed;
+    top: 10vH;
+    left: 5vW;
+
+}
+/* Associates */
+.associates {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    justify-items: start;
+    align-items: center;
+    position: relative;
+}
+
+.associates a {
+    background: #FFFFFF;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: .3s;
+    padding: 15px;
+    object-fit: contain;
+    filter: brightness(100%);
+}
+.associates a img {
+    max-height: 100%;
+    max-width: 100%;
+}
+.associates a:hover {
+    filter: brightness(300%);
+}
+/* *******************LEssons Section */
+section.lessons {
+    margin-top: -1px;
+    height: calc(100vH - 60px);
+}
+section.lessons::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url(../imgs/Photography/mountainsridge.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    filter: grayscale(60%) brightness(70%);
+    clip-path: polygon(100% 0, 0 0, 100% 30%);
+}
+section.lesson2 {
+    height: 80vH;
+}
+section.lesson2 {
+    height: calc(100vH - 60px);
+}
+section.lesson2::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url(../imgs/Photography/mountainsdirt.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    filter: grayscale(80%) brightness(70%);
+    clip-path: polygon(100% 81%, 0 100%, 100% 100%);
+}
+/* *********************Footer Animation */
+section.footer {
+    height: 60vH;
+}
+section.footer::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url(../imgs/Photography/sky.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(75%);
+}
+section.footer .content-grid {
+    height: 100%;
+}
+.social-icons {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    
+}
+.social-icons svg {
+    padding: 0 15px;
+}
+.footer p {
+    color: #FDFDFD;
+    display:inline-block;
+}
+.footer .download a {
+    display: inline-block;
+    padding: 0 0 0 30px;
+}
+.footer .download {
+    grid-column-start: 4;
+    grid-column-end: span 4;
+    display: flex;
+    align-items: center;
+}
+.footer .email {
+
+}
+.footer input[type=text] {
+    color: #FDFDFD;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14pt;
+}

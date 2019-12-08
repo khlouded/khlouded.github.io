@@ -284,6 +284,9 @@ a.pdfdocument {
     text-transform: uppercase;
     max-width: 200px;
 }
+a.inline {
+    display: inline-block;
+}
 
 @media only screen and (max-width: 1000px) and (min-width:901px) {
     .maincontent {
